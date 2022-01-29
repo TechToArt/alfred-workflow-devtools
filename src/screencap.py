@@ -4,8 +4,8 @@ import json
 import sys
 
 import utils
-from workflow.notify import notify
 from workflow import Workflow3
+from workflow.notify import notify
 
 
 def main(wf):
@@ -15,10 +15,15 @@ def main(wf):
     device_info = json.loads(utils.decode_str(args[0]))
 
     prefix = utils.get_tag() + "_" + device_info["device_name"] + "_" + utils.get_str_local_time()
-    command = utils.get_adb_path() + " -s %s exec-out screencap -p > ~/downloads/%s.png" % (
-        device_info["device_id"], prefix)
+    local_dir = "~/downloads"
+    local_path = "%s/%s.png" % (local_dir, prefix)
+    command = utils.get_adb_path() + " -s %s exec-out screencap -p > %s" % (
+        device_info["device_id"], local_path)
     result = utils.exec_cmd(command)
-    notify(result)
+    # 将截图拷贝到剪切板
+    utils.read_image_to_clipboard(local_path)
+    notify_title = "alfred手机截屏"
+    notify(notify_title.decode("utf-8"), ("截图已经复制到剪切板，本地保存路径%s" % local_dir).decode("utf-8"))
 
 
 if __name__ == '__main__':

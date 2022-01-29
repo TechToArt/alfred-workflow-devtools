@@ -70,3 +70,7 @@ def decode_str(string):
 def read_clipboard_str():
     p = subprocess.Popen(['pbpaste'], stdout=subprocess.PIPE)
     return p.stdout.read()
+
+
+def read_image_to_clipboard(img_path):
+    exec_cmd("exec/impbcopy " + img_path)
