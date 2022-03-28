@@ -18,7 +18,7 @@ def main(wf):
     notify_title = "alfred打开app"
     # 读取到apk路径则进行安装
     if "://" in clipboard_str:
-        command = utils.get_adb_path() + " -s %s shell am start -a %s" % (device_info["device_id"], clipboard_str)
+        command = utils.get_adb_path() + " -s %s shell am start %s" % (device_info["device_id"], clipboard_str)
         result = utils.exec_cmd(command)
         notify(notify_title.decode("utf-8"), result)
     else:

@@ -8,7 +8,7 @@ from workflow import Workflow3
 
 
 def main(wf):
-    # 多个组件会调用改脚本，调用脚本时传入来源字段
+    # 多个组件会调用该脚本，调用脚本时传入来源字段
     source = wf.args[0] if len(wf.args) else ""
 
     device_list = utils.get_devices()
