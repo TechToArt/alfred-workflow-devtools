@@ -20,7 +20,7 @@ def main(wf):
     # 读取到apk路径则进行安装
     if ".apk" in clipboard_str:
         notify(notify_title.decode("utf-8"), "开始安装apk".decode("utf-8"))
-        command = utils.get_adb_path() + " -s %s install %s" % (device_info["device_id"], clipboard_str)
+        command = utils.get_adb_path() + " -s %s install \"%s\"" % (device_info["device_id"], clipboard_str)
         try:
             result = utils.exec_cmd(command)
             notify(notify_title.decode("utf-8"), result)
