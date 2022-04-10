@@ -6,6 +6,7 @@ import re
 import subprocess
 import time
 
+default_adb_path = os.getenv("HOME") + "/Library/Android/sdk/platform-tools/adb"
 
 def get_tag():
     return "devtools"
@@ -43,7 +44,10 @@ def get_adb_path():
     获取可用adb路径
     :return: adb路径
     """
-    adb_dir = get_path("adb")
+    if os.path.exists(default_adb_path):
+        adb_dir = default_adb_path
+    else:
+        adb_dir = get_path("adb")
     return adb_dir if len(adb_dir) > 0 else "exec/adb"
 
 
