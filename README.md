@@ -13,3 +13,10 @@
 | scrcpy  | 快捷开启scrcpy | 🚴🏻 |
 | 待定 | 手机电脑剪切板同步 | 🚴🏻 |
 | 待定 | 快速打开跳链页面 | 🚴🏻 |
+
+## 调试方法
+为了方便调试，能让改动实时生效，可以建立软连接，链接到工程目录
+例如：
+``` 
+ln -s 工程目录 "/Users/【用户名】/Library/Application Support/Alfred/Alfred.alfredpreferences/workflows"
+```
