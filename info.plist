@@ -36,6 +36,19 @@
 		</array>
 		<key>3FAE02C0-B6D8-4DD0-9088-4527A97A8A60</key>
 		<array/>
+		<key>7C53AE9D-4B98-4C35-8370-1CF71158236C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>90F35CEA-5C55-472E-84D7-FB00D547EBF3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>85E1C645-243E-4183-9B50-CD9FBDFDD4AB</key>
 		<array>
 			<dict>
@@ -67,6 +80,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>9B30CFDF-6E7D-4834-8D76-FBC0F08F13AB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E728C671-5229-4E68-B70B-6F578CC83751</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8CB31BBF-815C-4B4A-AB0B-614391DA4520</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -114,7 +140,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python src/device.py device
+				<string>python3 src/device.py device
 </string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -189,7 +215,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python src/device.py
+				<string>python3 src/device.py
 </string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -219,7 +245,8 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python src/screencap.py {query}</string>
+				<string>echo {query}
+python3 src/screencap.py {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -242,7 +269,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python src/install.py {query}</string>
+				<string>python3 src/install.py {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -285,7 +312,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python src/device.py
+				<string>python3 src/device.py
 </string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -315,7 +342,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python src/push.py {query}</string>
+				<string>python3 src/push.py {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -358,7 +385,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python src/device.py
+				<string>python3 src/device.py
 </string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -383,6 +410,29 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python3 src/attach.py {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>90F35CEA-5C55-472E-84D7-FB00D547EBF3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -396,7 +446,7 @@
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>keyword</key>
-				<string>action</string>
+				<string>attach</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -408,15 +458,16 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python src/device.py</string>
+				<string>python3 src/device.py
+</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>使用剪切板中的跳链打开app</string>
+				<string>attach到指定进程进行调试</string>
 				<key>title</key>
-				<string>Android跳链跳转</string>
+				<string>attach应用</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -425,7 +476,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>3ABD8CA8-5701-4818-A324-7B44DDDE4E82</string>
+			<string>7C53AE9D-4B98-4C35-8370-1CF71158236C</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -437,7 +488,80 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python src/action.py {query}</string>
+				<string>python3 src/detach.py {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8CB31BBF-815C-4B4A-AB0B-614391DA4520</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>detach</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python3 src/device.py
+</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>清除attach</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E728C671-5229-4E68-B70B-6F578CC83751</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python3 src/action.py {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -468,6 +592,55 @@
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>keyword</key>
+				<string>action</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python3 src/device.py</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>使用剪切板中的跳链打开app</string>
+				<key>title</key>
+				<string>Android跳链跳转</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>3ABD8CA8-5701-4818-A324-7B44DDDE4E82</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
 				<string>scrcpy</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
@@ -480,7 +653,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>$which scrcpy</string>
+				<string>$which3 scrcpy</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -532,90 +705,122 @@
 		<key>2944E233-BB4A-4AA6-A992-7516D5D25AF2</key>
 		<dict>
 			<key>xpos</key>
-			<integer>180</integer>
+			<real>180</real>
 			<key>ypos</key>
-			<integer>285</integer>
+			<real>285</real>
 		</dict>
 		<key>3ABD8CA8-5701-4818-A324-7B44DDDE4E82</key>
 		<dict>
 			<key>xpos</key>
-			<integer>175</integer>
+			<real>185</real>
 			<key>ypos</key>
-			<integer>700</integer>
+			<real>965</real>
 		</dict>
 		<key>3FAE02C0-B6D8-4DD0-9088-4527A97A8A60</key>
 		<dict>
 			<key>xpos</key>
-			<integer>190</integer>
+			<real>180</real>
 			<key>ypos</key>
-			<integer>900</integer>
+			<real>1105</real>
 		</dict>
 		<key>6617C767-99BB-4E51-8AE9-95F1EB83DCA2</key>
 		<dict>
 			<key>xpos</key>
-			<integer>385</integer>
+			<real>395</real>
 			<key>ypos</key>
-			<integer>700</integer>
+			<real>965</real>
+		</dict>
+		<key>7C53AE9D-4B98-4C35-8370-1CF71158236C</key>
+		<dict>
+			<key>xpos</key>
+			<real>180</real>
+			<key>ypos</key>
+			<real>705</real>
 		</dict>
 		<key>85E1C645-243E-4183-9B50-CD9FBDFDD4AB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>180</integer>
+			<real>180</real>
 			<key>ypos</key>
-			<integer>150</integer>
+			<real>150</real>
+		</dict>
+		<key>8CB31BBF-815C-4B4A-AB0B-614391DA4520</key>
+		<dict>
+			<key>xpos</key>
+			<real>390</real>
+			<key>ypos</key>
+			<real>840</real>
 		</dict>
 		<key>90245B8A-7740-4727-BD64-1071D04B55E7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>180</integer>
+			<real>180</real>
 			<key>ypos</key>
-			<integer>425</integer>
+			<real>425</real>
+		</dict>
+		<key>90F35CEA-5C55-472E-84D7-FB00D547EBF3</key>
+		<dict>
+			<key>xpos</key>
+			<real>385</real>
+			<key>ypos</key>
+			<real>705</real>
 		</dict>
 		<key>9B30CFDF-6E7D-4834-8D76-FBC0F08F13AB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>380</integer>
+			<real>380</real>
 			<key>ypos</key>
-			<integer>565</integer>
+			<real>565</real>
 		</dict>
 		<key>A56FF573-8733-43BA-B6C7-98695C867213</key>
 		<dict>
 			<key>xpos</key>
-			<integer>180</integer>
+			<real>180</real>
 			<key>ypos</key>
-			<integer>565</integer>
+			<real>565</real>
 		</dict>
 		<key>A5792614-7997-4DF4-8559-E09A9182ABC6</key>
 		<dict>
 			<key>xpos</key>
-			<integer>375</integer>
+			<real>375</real>
 			<key>ypos</key>
-			<integer>425</integer>
+			<real>425</real>
 		</dict>
 		<key>D57562E9-C44C-441A-BE41-05ACE0047FCF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>375</integer>
+			<real>375</real>
 			<key>ypos</key>
-			<integer>285</integer>
+			<real>285</real>
 		</dict>
 		<key>D6408BDC-D29F-42FA-978C-1BB52335AF3C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>375</integer>
+			<real>375</real>
 			<key>ypos</key>
-			<integer>150</integer>
+			<real>150</real>
 		</dict>
 		<key>DB8B63DB-1512-48C5-B1D0-44CB0E529EF7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>390</integer>
+			<real>395</real>
 			<key>ypos</key>
-			<integer>905</integer>
+			<real>1110</real>
+		</dict>
+		<key>E728C671-5229-4E68-B70B-6F578CC83751</key>
+		<dict>
+			<key>xpos</key>
+			<real>185</real>
+			<key>ypos</key>
+			<real>840</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>variables</key>
 	<dict>
+		<key>python</key>
+		<string>/Users/aixuan/.fef/bin/python</string>
 		<key>which</key>
 		<string>/usr/bin/which</string>
 	</dict>

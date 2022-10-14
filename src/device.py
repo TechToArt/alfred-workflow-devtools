@@ -4,7 +4,7 @@ import json
 import sys
 
 import utils
-from workflow import Workflow3
+from workflow import Workflow
 
 
 def main(wf):
@@ -15,7 +15,7 @@ def main(wf):
 
     for device in device_list:
         # 组件中进行传值有逗号会被截断，编码后进行传值
-        arg = utils.encode_str(json.dumps({"device_id": device[0], "device_name": device[1]}))
+        arg = utils.encode_str(json.dumps({"device_id": device[0], "device_name": device[1]}).encode())
         if source == "device":
             arg = device[0]
         wf.add_item(device[0], device[1], arg=arg, valid=True)
@@ -27,5 +27,5 @@ def main(wf):
 
 
 if __name__ == '__main__':
-    wf = Workflow3()
+    wf = Workflow()
     sys.exit(wf.run(main))

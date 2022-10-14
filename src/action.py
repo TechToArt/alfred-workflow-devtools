@@ -4,7 +4,7 @@ import json
 import sys
 
 import utils
-from workflow import Workflow3
+from workflow import Workflow
 from workflow.notify import notify
 
 
@@ -26,5 +26,5 @@ def main(wf):
 
 
 if __name__ == '__main__':
-    wf = Workflow3()
+    wf = Workflow()
     sys.exit(wf.run(main))

@@ -17,7 +17,7 @@ def get_str_local_time(format_str="%Y-%m-%d-%H-%M-%S"):
 
 
 def exec_cmd(command):
-    return subprocess.check_output(command, shell=True)
+    return subprocess.check_output(command, shell=True).decode('utf-8')
 
 
 def get_path(exec_name):
@@ -64,16 +64,16 @@ def get_devices():
 
 
 def encode_str(string):
-    return base64.b64encode(string)
+    return base64.b64encode(string).decode("utf-8")
 
 
 def decode_str(string):
-    return base64.b64decode(string)
+    return base64.b64decode(string.encode())
 
 
 def read_clipboard_str():
     p = subprocess.Popen(['pbpaste'], stdout=subprocess.PIPE)
-    return p.stdout.read()
+    return p.stdout.read().decode("utf-8")
 
 
 def read_image_to_clipboard(img_path):

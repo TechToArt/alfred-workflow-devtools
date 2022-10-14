@@ -4,7 +4,7 @@ import json
 import sys
 
 import utils
-from workflow import Workflow3
+from workflow import Workflow
 from workflow.notify import notify
 
 
@@ -23,9 +23,9 @@ def main(wf):
     # 将截图拷贝到剪切板
     utils.read_image_to_clipboard(local_path)
     notify_title = "alfred手机截屏"
-    notify(notify_title.decode("utf-8"), ("截图已经复制到剪切板，本地保存路径%s" % local_dir).decode("utf-8"))
+    notify(notify_title, ("截图已经复制到剪切板，本地保存路径%s" % local_dir))
 
 
 if __name__ == '__main__':
-    wf = Workflow3()
+    wf = Workflow()
     sys.exit(wf.run(main))
