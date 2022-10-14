@@ -20,9 +20,9 @@ def main(wf):
     if "://" in clipboard_str:
         command = utils.get_adb_path() + " -s %s shell am start \"%s\"" % (device_info["device_id"], clipboard_str)
         result = utils.exec_cmd(command)
-        notify(notify_title.decode("utf-8"), result)
+        notify(notify_title, result)
     else:
-        notify(notify_title.decode("utf-8"), "剪切板中没有找到跳链".decode("utf-8"))
+        notify(notify_title, "剪切板中没有找到跳链")
 
 
 if __name__ == '__main__':

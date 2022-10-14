@@ -17,7 +17,6 @@ def main(wf):
         wf.add_item("没有找到可用设备，请确认设备已连接")
     else:
         scrcpy_dir = utils.get_path("scrcpy")
-        print scrcpy_dir
         wf.add_item("没有安装scrcpy")
 
     wf.send_feedback()

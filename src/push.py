@@ -19,15 +19,15 @@ def main(wf):
     notify_title = "alfred push文件"
     # 读取到apk路径则进行安装
     if "/" in clipboard_str:
-        notify(notify_title.decode("utf-8"), "开始push".decode("utf-8"))
+        notify(notify_title, "开始push")
         command = utils.get_adb_path() + " -s %s push \"%s\" /sdcard" % (device_info["device_id"], clipboard_str)
         try:
             result = utils.exec_cmd(command)
-            notify(notify_title.decode("utf-8"), result)
+            notify(notify_title, result)
         except subprocess.CalledProcessError as e:
-            notify((notify_title + "失败").decode("utf-8"))
+            notify(notify_title + "失败")
     else:
-        notify(notify_title.decode("utf-8"), "剪切板中没有找到有效文件路径".decode("utf-8"))
+        notify(notify_title, "剪切板中没有找到有效文件路径")
 
 
 if __name__ == '__main__':

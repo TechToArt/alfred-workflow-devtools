@@ -19,15 +19,15 @@ def main(wf):
     notify_title = "alfred安装apk"
     # 读取到apk路径则进行安装
     if ".apk" in clipboard_str:
-        notify(notify_title.decode("utf-8"), "开始安装apk".decode("utf-8"))
+        notify(notify_title, "开始安装apk")
         command = utils.get_adb_path() + " -s %s install -r -t -d \"%s\"" % (device_info["device_id"], clipboard_str)
         try:
             result = utils.exec_cmd(command)
-            notify(notify_title.decode("utf-8"), result)
+            notify(notify_title, result)
         except subprocess.CalledProcessError as e:
-            notify((notify_title + "失败").decode("utf-8"))
+            notify(notify_title + "失败")
     else:
-        notify(notify_title.decode("utf-8"), "剪切板中没有找到apk地址".decode("utf-8"))
+        notify(notify_title, "剪切板中没有找到apk地址")
 
 
 if __name__ == '__main__':
