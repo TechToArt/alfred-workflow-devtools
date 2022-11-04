@@ -36,6 +36,19 @@
 		</array>
 		<key>3FAE02C0-B6D8-4DD0-9088-4527A97A8A60</key>
 		<array/>
+		<key>5479F0D1-F6C4-4335-87B2-1F3D0F52F772</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1C0A1334-4103-49A5-A8CC-3704C8356062</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7C53AE9D-4B98-4C35-8370-1CF71158236C</key>
 		<array>
 			<dict>
@@ -415,6 +428,150 @@ python3 src/screencap.py {query}</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
+				<string>python3 src/action.py {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>6617C767-99BB-4E51-8AE9-95F1EB83DCA2</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>action</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python3 src/device.py</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>使用剪切板中的跳链打开app</string>
+				<key>title</key>
+				<string>Android跳链跳转</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>3ABD8CA8-5701-4818-A324-7B44DDDE4E82</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>screenrecord</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python3 src/screenrecord.py</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>使用剪切板中的跳链打开app</string>
+				<key>title</key>
+				<string>Android跳链跳转</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>5479F0D1-F6C4-4335-87B2-1F3D0F52F772</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python3 src/action.py {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1C0A1334-4103-49A5-A8CC-3704C8356062</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
 				<string>python3 src/attach.py {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
@@ -559,11 +716,11 @@ python3 src/screencap.py {query}</string>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>102</integer>
+				<integer>127</integer>
 				<key>script</key>
-				<string>python3 src/action.py {query}</string>
+				<string></string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
@@ -572,58 +729,9 @@ python3 src/screencap.py {query}</string>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>6617C767-99BB-4E51-8AE9-95F1EB83DCA2</string>
+			<string>DB8B63DB-1512-48C5-B1D0-44CB0E529EF7</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>keyword</key>
-				<string>action</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>python3 src/device.py</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>使用剪切板中的跳链打开app</string>
-				<key>title</key>
-				<string>Android跳链跳转</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>3ABD8CA8-5701-4818-A324-7B44DDDE4E82</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -674,34 +782,18 @@ python3 src/screencap.py {query}</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>127</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>DB8B63DB-1512-48C5-B1D0-44CB0E529EF7</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>1C0A1334-4103-49A5-A8CC-3704C8356062</key>
+		<dict>
+			<key>xpos</key>
+			<real>380</real>
+			<key>ypos</key>
+			<real>830</real>
+		</dict>
 		<key>2944E233-BB4A-4AA6-A992-7516D5D25AF2</key>
 		<dict>
 			<key>xpos</key>
@@ -712,30 +804,37 @@ python3 src/screencap.py {query}</string>
 		<key>3ABD8CA8-5701-4818-A324-7B44DDDE4E82</key>
 		<dict>
 			<key>xpos</key>
-			<real>185</real>
+			<real>180</real>
 			<key>ypos</key>
-			<real>965</real>
+			<real>695</real>
 		</dict>
 		<key>3FAE02C0-B6D8-4DD0-9088-4527A97A8A60</key>
 		<dict>
 			<key>xpos</key>
+			<real>175</real>
+			<key>ypos</key>
+			<real>1230</real>
+		</dict>
+		<key>5479F0D1-F6C4-4335-87B2-1F3D0F52F772</key>
+		<dict>
+			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>1105</real>
+			<real>830</real>
 		</dict>
 		<key>6617C767-99BB-4E51-8AE9-95F1EB83DCA2</key>
 		<dict>
 			<key>xpos</key>
-			<real>395</real>
+			<real>380</real>
 			<key>ypos</key>
-			<real>965</real>
+			<real>695</real>
 		</dict>
 		<key>7C53AE9D-4B98-4C35-8370-1CF71158236C</key>
 		<dict>
 			<key>xpos</key>
-			<real>180</real>
+			<real>175</real>
 			<key>ypos</key>
-			<real>705</real>
+			<real>960</real>
 		</dict>
 		<key>85E1C645-243E-4183-9B50-CD9FBDFDD4AB</key>
 		<dict>
@@ -747,9 +846,9 @@ python3 src/screencap.py {query}</string>
 		<key>8CB31BBF-815C-4B4A-AB0B-614391DA4520</key>
 		<dict>
 			<key>xpos</key>
-			<real>390</real>
+			<real>380</real>
 			<key>ypos</key>
-			<real>840</real>
+			<real>1095</real>
 		</dict>
 		<key>90245B8A-7740-4727-BD64-1071D04B55E7</key>
 		<dict>
@@ -761,9 +860,9 @@ python3 src/screencap.py {query}</string>
 		<key>90F35CEA-5C55-472E-84D7-FB00D547EBF3</key>
 		<dict>
 			<key>xpos</key>
-			<real>385</real>
+			<real>380</real>
 			<key>ypos</key>
-			<real>705</real>
+			<real>960</real>
 		</dict>
 		<key>9B30CFDF-6E7D-4834-8D76-FBC0F08F13AB</key>
 		<dict>
@@ -803,16 +902,16 @@ python3 src/screencap.py {query}</string>
 		<key>DB8B63DB-1512-48C5-B1D0-44CB0E529EF7</key>
 		<dict>
 			<key>xpos</key>
-			<real>395</real>
+			<real>385</real>
 			<key>ypos</key>
-			<real>1110</real>
+			<real>1230</real>
 		</dict>
 		<key>E728C671-5229-4E68-B70B-6F578CC83751</key>
 		<dict>
 			<key>xpos</key>
-			<real>185</real>
+			<real>175</real>
 			<key>ypos</key>
-			<real>840</real>
+			<real>1095</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
